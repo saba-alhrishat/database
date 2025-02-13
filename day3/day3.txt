@@ -1,0 +1,15 @@
+day3
+
+#ALTER TABLE employees ADD COLUMN department_id INT
+
+#ALTER TABLE employees ADD COLUMN manger_id INT
+
+#ALTER TABLE employees ADD CONSTRAINT dep_emp_id FOREIGN KEY (department_id) REFERENCES department (department_id)
+
+#ALTER TABLE employees ADD CONSTRAINT man_emp_id FOREIGN KEY (manger_id) REFERENCES employees (Employees_id)
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+

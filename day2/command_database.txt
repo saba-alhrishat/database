@@ -1,134 +1,22 @@
-1* first step after create a database we must create a tables
--first table
 
-CREATE TABLE department (
-    department_id INT PRIMARY KEY AUTO_INCREMENT,
-    manger VARCHAR(100),
-    name VARCHAR(100)
-);
----------------------------------------------------------------------------
-2* next step we need insert data into tables
+day 2
+#create table 
 
-INSERT INTO department
-VALUES (1, "ibrahim"," ahmad");
-
-
-
-
----------------------------------------------------------------------------
-3*aftr that i want update that data
-
-UPDATE department                                   
-
-SET manger = 'osama', name = 'harmash'
-WHERE department_id = 3;                                  
-
-SELECT * FROM department;                           
-
----------------------------------------------------------------------------
-4* i want delete data
-
-DELETE FROM department WHERE department_id = 3;    
-SELECT * FROM department;              
-*************************************************************************
-
-
-second table
-
-#creact
-CREATE TABLE employees (
-    Employees_id INT PRIMARY KEY AUTO_INCREMENT,
-    First_name VARCHAR(100),
-    Last_name VARCHAR(100),
-    Salary INT ,
-    Job_title VARCHAR(100),
-    Hire_data date
-);
-
-
-#INSERT
-INSERT INTO employees (Employees_id, first_name, last_name, salary, Job_title, Hire_data) 
-VALUES (2, 'saba', 'alhrishat', 9000, 'devloper', 2024-09-10);
-
-
-
-#UPDATE
-UPDATE employees                             
-SET first_name = 'soso', last_name = 'queen'   
-WHERE Employees_id = 2;                                   
-
-SELECT * FROM employees; 
-
-
-#delete
-
-DELETE FROM employees WHERE Employees_id = 3;    
-SELECT * FROM employees;              
-*************************************************************************
-
-
-thired table
-#create
-
-CREATE TABLE projects (
-    projects_id INT PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE test (
+    test_id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100),
-    START_date DATE,
-    END_date DATE
+    discription VARCHAR(100)
 );
 
-#insert
 
-INSERT INTO location
-VALUES (1, "jordan"," aqaba");
+#delete table
 
+DROP TABLE test;
 
-#update
-
-UPDATE location                             
-SET country = 'usa', city = 'shukago'   
-WHERE location_id = 2;                                   
-
-SELECT * FROM location; 
+#
 
 
-#delete
-
-DELETE FROM location WHERE location_id = 3;    
-SELECT * FROM location;   
-
-*************************************************************************
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-fourth table 
-#create
 
-CREATE TABLE location (
-   location_id INT PRIMARY KEY AUTO_INCREMENT,
-    country VARCHAR(100),
-    city VARCHAR(100)
-);
-
-#insert
-
-INSERT INTO projects (projects_id, name, START_date, END_date) 
-VALUES (2, 'database', 2024-09-5, 2024-09-10);
-
-
-#update
-
-UPDATE projects                             
-SET START_date = 2024-05-5, END_date = 2026-1-1   
-WHERE projects_id = 2;   
-
-     
-UPDATE projects                             
-SET name = 'DATABASE' 
-WHERE projects_id = 3;                            
-
-SELECT * FROM projects; 
-
-#delete
-
-DELETE FROM projects WHERE projects_id = 2;    
-SELECT * FROM projects; 
