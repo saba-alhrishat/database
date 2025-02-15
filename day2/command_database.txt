@@ -1,19 +1,46 @@
 
 day 2
+
+#create database
+
+create database hr;
+
+
+
 #create table 
 
-CREATE TABLE test (
+CREATE TABLE employees (
     test_id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100),
     discription VARCHAR(100)
 );
 
+#Insert  data
 
-#delete table
+INSERT INTO employees
+VALUES (1, "ibrahim"," ahmad");
 
-DROP TABLE test;
 
-#
+
+#Update a Record
+
+UPDATE employees
+SET First_name = 'queen', Last_name = 'saba'
+WHERE Employees_id = 2;
+
+
+#Delete a Record
+
+DELETE FROM employees
+WHERE employee_id = 1;
+
+
+#AddForeign Key Constraints
+
+ ALTER TABLE employees
+ADD CONSTRAINT fk_department
+FOREIGN KEY (department_id) REFERENCES departments(department_id);
+
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
